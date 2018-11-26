@@ -1,0 +1,21 @@
+body{
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 16pt;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.page-header {
+    height: 300px;
+    background-color: darkblue;
+}
+.page-main {
+    height: 300px;
+    background-color: lightpink;
+}
+.page-footer {
+    height: 300px;
+    background-color: lightgray;
+}
