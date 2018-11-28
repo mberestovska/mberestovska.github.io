@@ -13,9 +13,6 @@ body{
     /*display: table;*/
     clear: both;
 }
-.h-100 {
-    height: 100px;
-}
 
 a {
     text-decoration: none;
@@ -28,32 +25,35 @@ a {
 }
 
 .page-header {
-    height: 100vh;
-    background-color: white;
-    background-image: url("1.jpg");
+    height: 350px;
+    background-color: rgb(175, 173, 161);
+    background-image: url("3.jpg");
     background-repeat:  no-repeat;
-    background-size: contain;
-    color: rgb(240, 234, 223);
+    color:  rgb(104, 102, 94);
+    background-position: center;
 }
+
 .navigation {
     float: right;
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-top: 20px;
 }
 .navigation li{
     float: left;
     margin-right: 30px;
     text-transform: uppercase;
     font-size: 16pt;
+    line-height: 18pt;
 }
 .navigation a:hover {
     text-decoration: underline overline;
 }
 .page-header h1 {
-    text-align: center;
-    padding-top: 10%;
+    float: left;
     font-size: 36pt;
+    line-height: 38pt;
 }
 
 .scroll {
@@ -160,3 +160,11 @@ opacity: 0.3;
     margin-top: 30px;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 8pt;
+    }
+    .page-header {
+        height: auto;
+    }
+}
