@@ -5,17 +5,158 @@ body{
     line-height: 16pt;
     display: flex;
     flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+}
+.clearfix/*::after*/ {
+    content: "";
+    /*display: table;*/
+    clear: both;
+}
+.h-100 {
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .page-header {
-    height: 300px;
-    background-color: #451B31;
+    height: 100vh;
+    background-color: white;
+    background-image: url("1.jpg");
+    background-repeat:  no-repeat;
+    background-size: contain;
+    color: rgb(240, 234, 223);
 }
+.navigation {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation li{
+    float: left;
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 16pt;
+}
+.navigation a:hover {
+    text-decoration: underline overline;
+}
+.page-header h1 {
+    text-align: center;
+    padding-top: 10%;
+    font-size: 36pt;
+}
+
+.scroll {
+    display: inline-block;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    border: 1px solid  rgb(240, 234, 223);
+border-radius: 50px;
+padding: 30px;
+opacity: 0.3;
+}
+
+.scroll:hover {
+    opacity: 1;
+}
+
 .page-main {
-    height: 300px;
-    background-color: lightpink;
+    height: auto;
+    background-color: white;
+    padding-bottom: 20px;
 }
+
+.skill-icon {
+    width: 50px;
+    height: auto;
+}
+
+.site-list {
+    list-style: none;
+}
+
+.site-list li {
+    float: left;
+    border-right: 1px solid grey;
+    padding: 20px;
+}
+
+.site-list li:last-child {
+    border: none;
+}
+
+.site-list img {
+    width: 200px;
+    height: auto;
+}
+
+.contact-list, .social {
+    list-style: none;
+    position: relative;
+}
+
+.contact-item,
+.social-item {
+    padding: 20px;
+
+}
+
+.contact-item::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 5px;
+}
+
+.phone::before {
+    background-image: url("phone.png");
+}
+
+.mail::before {
+    background-image: url("mail.png");
+    top: 70px;
+}
+/*
+.fb::before {
+    background-image: url("facebook.png");
+}
+
+.ln::before {
+    background-image: url("linkedin.png");
+    left: 180px;
+}
+
+.git::before {
+    background-image: url("git.png");
+    left: 310px;
+}
+*/
+.social-item {
+    float: left;
+}
+
 .page-footer {
-    height: 300px;
+    height: 100px;
     background-color: lightgray;
 }
+
+.page-footer p {
+    text-align: center;
+    color: gray;
+    margin-top: 30px;
+}
+

@@ -3,14 +3,70 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Portfolio</title>
+    <title>Junior Front-End Developer M.Berestovska</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="https://github.com/mberestovska/mberestovska.github.io/blob/master/main.css"/>
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="https://github.com/mberestovska/mberestovska.github.io/blob/master/main.css"/>-->
     <!--<script src="main.js"></script>-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
 </head>
 <body>  
-    <div class="page-header"></div>
-    <div class="page-main">Hello! My name is Maria! </div>
-    <div class="page-footer"></div>
+    <div class="page-header">
+        <div class="container h-100">
+            <div>
+                <ul class="navigation">
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacts">Contact Me</a></li>
+                </ul>
+            </div>
+            <h1>Junior Front-End Developer</h1>
+            <a class="scroll" href="#aboutMe"><span>Scroll</span></a>
+        </div>
+    </div>
+    <div class="page-main">
+            <div class="container">
+                <article>
+                    <h2  id="aboutMe">About Me</h2>
+                    <p>Hello! My name is Maria. Recently I switched to a new profession - Front-End Developer.</p>
+                    <p>I'm fast learning, self-driven and hard-working person, eager to de a part of a team. </p>
+                    <p>My current technical skills are</p>
+                    <div>
+                        <img src="html.png" title="HTML" class="skill-icon">
+                        <img src="css.png" title="CSS" class="skill-icon">
+                        <img src="js.png" title="JavaScript - basic level" class="skill-icon">
+                    </div>
+                    <h3>Courses</h3>
+                    <ul>
+                        <li>HTML5 and CSS Fundamentals - edx.org</li>
+                        <li>CSS Basics - edx.org</li>
+                        <li>Interactive Courses HTML, CSS and JavaScript- htmlacademy.ru</li>
+                    </ul>
+                </article>
+                <article>
+                    <h2 id="portfolio">Portfolio</h2>
+                    <ul class="site-list">
+                        <li><a href=" https://mberestovska.github.io/site-1.mberestovska.github.io/" target="_blanck"><img src="site-1.png" alt="Print screen of web page"></a></li>
+                        <li><a href="https://mberestovska.github.io/Cake-site/" target="_blanck"><img src="site 2.png" alt="Print screen of web page"></a></li>
+                    </ul>
+                </article>
+                <article class=" clearfix">
+                    <h2 id="contacts">Contacts</h2>
+                    <ul class="contact-list">
+                        <li class="contact-item phone">+380 97 686 39 13</li>
+                        <li class="contact-item mail">berestovska.mariia@gmail.com</li>
+                    </ul>
+                    <ul class="social">
+                        <li class="social-item fb"><li class="social-item ln"><a href="https://www.facebook.com/profile.php?id=100001558255625" target="_blank"><img src="facebook.png"></li></li>
+                        <li class="social-item ln"><a href="https://www.linkedin.com/in/mariia-berestovska-960a6b97/" target="_blank"><img src="linkedin.png"></li>
+                        <li class="social-item git"><a href="https://github.com/mberestovska" target="_blank"><img src="git.png"></a></li>
+                    </ul>
+                </article>
+            </div>
+    </div>
+    <div class="page-footer">
+            <div class="container">
+                <p> by Maria Berestovska 2018</p>
+            </div>
+    </div>
 </body>
 </html>
