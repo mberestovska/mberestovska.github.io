@@ -167,4 +167,7 @@ opacity: 0.3;
     .page-header {
         height: auto;
     }
+    .site-list li {
+    border: none;
+    }
 }
