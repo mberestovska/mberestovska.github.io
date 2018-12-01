@@ -114,7 +114,7 @@ a {
   
   /* Style the back side */
   .flip-box-back {
-    background-color: dodgerblue;
+    background-color: rgb(175, 173, 161);
     color: white;
     transform: rotateY(180deg);
   }
