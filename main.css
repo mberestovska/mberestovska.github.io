@@ -220,4 +220,12 @@ a {
         padding: 0 0 15px 0;
         border: none;
     }
+    .site-list img {
+        width: 75%;
+        
+    }
+    .site-list {
+        height: auto;
+        padding: 0;
+    }
 }
