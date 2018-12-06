@@ -151,7 +151,7 @@ h2 {
 
 .page-main {
     height: auto;
-    background-image:radial-gradient(rgb(221, 219, 219), white 20%);
+    background-image: white;
     padding-bottom: 20px;
 }
 
