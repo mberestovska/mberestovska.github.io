@@ -11,16 +11,22 @@
 </head>
 <body>  
     <div class="page-header">
-        <div class="container">
-            <div>
+        <div class="container flex">
+            <div style="width: 100%">
+                <div class="menu" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                </div>
+                <h1>Junior Front-End Developer</h1>
+            </div>
+            <div class="nav-block" onclick="closeMenu(this)">
                 <ul class="navigation">
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contacts">Contact Me</a></li>
+                        <li><a href="#aboutMe">About Me</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contacts">Contact Me</a></li>
                 </ul>
             </div>
-            <h1>Junior Front-End Developer</h1>
-            <!--<a class="scroll" href="#aboutMe"><span>Scroll</span></a>-->
         </div>
     </div>
     <div class="page-main">
@@ -47,6 +53,7 @@
                         <img src="html.png" title="HTML" class="skill-icon">
                         <img src="css.png" title="CSS" class="skill-icon">
                         <img src="js.png" title="JavaScript - basic level" class="skill-icon">
+                        <img src="wordpress.png" title="Wordpress" class="skill-icon">
                     </div>
                     <h3>Courses</h3>
                     <ul>
@@ -66,7 +73,7 @@
                     <h2 id="contacts">Contacts</h2>
                     <ul class="contact-list">
                         <li class="contact-item phone">+380 97 686 39 13</li>
-                        <li class="contact-item mail">berestovska.mariia@gmail.com</li>
+                        <li class="contact-item mail"><a href="mailto:berestovska.mariia@gmail.com">berestovska.mariia@gmail.com</a></li>
                     </ul>
                     <ul class="social">
                         <li class="social-item fb"><a href="https://www.facebook.com/profile.php?id=100001558255625" target="_blank"><img src="facebook.png"></a></li>
@@ -78,8 +85,35 @@
     </div>
     <div class="page-footer">
             <div class="container">
-                <p> by Maria Berestovska 2018</p>
+                <p> &#169 by Maria Berestovska 2018</p>
             </div>
     </div>
+    <script>
+        // for menu icon 
+        function myFunction(x) {
+            x.classList.toggle("change");
+            // display naviagation bar
+            var popup = document.querySelector('.nav-block');
+            popup.classList.toggle('hidden');
+        }
+        // to close navigation bar with any keyboard button
+        document.addEventListener('keydown', function() {
+            var closePopup = document.querySelector('.nav-block');
+            closePopup.classList.remove('hidden');
+            var menuIcon = document.querySelector('.menu');
+            menuIcon.classList.remove('change');
+        }); 
+        // 
+        function closeMenu() {
+            var menuBlock = document.querySelector('.nav-block');
+            menuBlock.classList.remove('hidden');
+            var menuIcon = document.querySelector('.menu');
+            menuIcon.classList.remove('change');
+        }
+
+
+
+       
+    </script>
 </body>
 </html>
