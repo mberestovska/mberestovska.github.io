@@ -39,7 +39,7 @@ h2 {
 .container {
     width: 80%;
     margin: 0 auto;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .page-header {
@@ -53,7 +53,7 @@ h2 {
     animation-duration: 15s;
 }
 .menu {
-    display: inline-block;
+    
     cursor: pointer;
     position: relative;
     float: right;
@@ -290,7 +290,7 @@ h2 {
     margin-top: 30px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     body {
         font-size: 8pt;
         margin: 0 auto;
@@ -311,7 +311,34 @@ h2 {
     }
     .site-list img {
         width: 75%;
-        
+    }
+    .site-list {
+        height: auto;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 8pt;
+        margin: 0 auto;
+    }
+    .page-header {
+        height: auto;
+    }
+    .flip-box{
+        margin: 10px auto;
+        float: none;
+        width: 250px;
+        height: 250px;
+    }
+    .site-list li {
+        padding: 0 0 15px 0;
+        border: none;
+        margin: 0 auto;
+    }
+    .site-list img {
+        width: 75%;
     }
     .site-list {
         height: auto;
