@@ -226,7 +226,7 @@ h2 {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    height: 200px;
+   /* height: 200px; */
 }
 
 .site-list li {
@@ -244,6 +244,10 @@ h2 {
     width: 300px;
     height: auto;
     
+}
+.contact-part {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .contact-list, .social {
@@ -277,6 +281,29 @@ h2 {
 
 .social-item {
     float: left;
+}
+
+.contact-form {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+#send-btn {
+    width: 100px;
+    height: 30px;
+}
+input, textarea{
+    margin: 10px;
+    padding: 5px;
+}
+
+input[type="text"] {
+    width:  230px;
+}
+
+.contact-form p {
+    color: #205CCE;
+    font-size: 16pt;
 }
 
 .page-footer {
