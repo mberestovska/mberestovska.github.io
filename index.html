@@ -72,24 +72,39 @@
                     </ul>
                 </article>
                 
-                <article class=" clearfix">
+                <article class="clearfix">
                     <h2>Small presentations of JavaScript</h2>
                     <ul>
                         <li><a href="https://mberestovska.github.io/Square-equation-solver/" target="_blanck">Solve a square equation</a></li>
                         <li><a href="https://mberestovska.github.io/Game-Guess-a-number/" target="_blanck">Guess a number</a></li>
                     </ul>
                 </article>
-                <article class=" clearfix">
-                    <h2 id="contacts">Contacts</h2>
-                    <ul class="contact-list">
-                        <li class="contact-item phone">+380 97 686 39 13</li>
-                        <li class="contact-item mail"><a href="mailto:berestovska.mariia@gmail.com">berestovska.mariia@gmail.com</a></li>
-                    </ul>
-                    <ul class="social">
-                        <li class="social-item fb"><a href="https://www.facebook.com/profile.php?id=100001558255625" target="_blank"><img src="facebook.png"></a></li>
-                        <li class="social-item ln"><a href="https://www.linkedin.com/in/mariia-berestovska-960a6b97/" target="_blank"><img src="linkedin.png"></a></li>
-                        <li class="social-item git"><a href="https://github.com/mberestovska" target="_blank"><img src="git.png"></a></li>
-                    </ul>
+                <article class="clearfix contact-part">
+                    <div>
+                        <h2 id="contacts">Contacts</h2>
+                        <ul class="contact-list">
+                            <li class="contact-item phone">+380 97 686 39 13</li>
+                            <li class="contact-item mail"><a href="mailto:berestovska.mariia@gmail.com">berestovska.mariia@gmail.com</a></li>
+                        </ul>
+                        <ul class="social">
+                            <li class="social-item fb"><a href="https://www.facebook.com/profile.php?id=100001558255625" target="_blank"><img src="facebook.png"></a></li>
+                            <li class="social-item ln"><a href="https://www.linkedin.com/in/mariia-berestovska-960a6b97/" target="_blank"><img src="linkedin.png"></a></li>
+                            <li class="social-item git"><a href="https://github.com/mberestovska" target="_blank"><img src="git.png"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="clearfix contact-form">
+                        <p>Or you can just text me</p>
+                        <form action="./mail.php" method="post">
+                            <label for="name"> Name:</label>
+                            <input type="text" id="name" placeholder="Sofia" name="name"> <br>
+                            <label for="email"> Email:</label>
+                            <input type="text" id="email" placeholder="sofia@example.com" name="email"><br>
+                            <label for="message">Your message:</label> <br>
+                            <textarea rows="5" cols="40" placeholder="Your message" name="message"></textarea><br>
+                            <button type="submit" id="send-btn" value="Send">Send</button>
+                        </form>
+                    </div>
                 </article>
             </div>
     </div>
@@ -119,11 +134,18 @@
             menuBlock.classList.remove('hidden');
             var menuIcon = document.querySelector('.menu');
             menuIcon.classList.remove('change');
-        }
-
-
-
-       
+        } 
     </script>
+    <?php 
+        $to = "grushevets@gmail.com"; // емайл получателя данных из формы 
+        $tema = "Форма обратной связи на PHP"; // тема полученного емайла 
+        $message = "Ваше имя: ".$_POST['name']."<br>";//присвоить переменной значение, полученное из формы name=name
+        $message .= "E-mail: ".$_POST['email']."<br>"; //полученное из формы name=email
+        // $message .= "Номер телефона: ".$_POST['phone']."<br>"; //полученное из формы name=phone
+        $message .= "Сообщение: ".$_POST['message']."<br>"; //полученное из формы name=message
+        $headers  = 'MIME-Version: 1.0' . "\r\n"; // заголовок соответствует формату плюс символ перевода строки
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n"; // указывает на тип посылаемого контента
+        mail($to, $tema, $message, $headers); //отправляет получателю на емайл значения переменных
+    ?>
 </body>
 </html>
