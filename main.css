@@ -43,14 +43,18 @@ h2 {
 }
 
 .page-header {
-    height: 350px;
+    height: 100vh;
     background-color: rgb(175, 173, 161);
     background-image: url("3.jpg");
     background-repeat:  no-repeat;
     color:  #205CCE;
     background-position: center;
+    background-size: cover;
+    position: relative;
+    /*  this is for changing pictures on load 
     animation-name: karusel;
     animation-duration: 15s;
+    */
 }
 .menu {
     
@@ -91,6 +95,7 @@ h2 {
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     visibility: hidden;
+    z-index: 1;
 }
 
 .navigation {
@@ -142,16 +147,22 @@ h2 {
 }
 */
 .page-header h1 {
-    float: left;
+    /*float: left; -- this is for old style */
     font-size: 36pt;
     line-height: 38pt;
     letter-spacing: 3px;
-    margin: 15px 0;
+   /* margin: 15px 0;*/ 
+   /* New style for parallax starts here*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -247px;
+    margin-top: -50px;
 }
 
 .page-main {
     height: auto;
-    background-image: white;
+    background: white;
     padding-bottom: 20px;
 }
 
@@ -211,8 +222,9 @@ h2 {
   }
 
 .skill-icon {
-    width: 70px;
-    height: auto;
+    width: 80px;
+    height:auto;
+    
 }
 
 .skill-icon:hover {
@@ -248,6 +260,7 @@ h2 {
 .contact-part {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 .contact-list, .social {
@@ -280,12 +293,28 @@ h2 {
 }
 
 .social-item {
-    float: left;
+    float: left;  
 }
+
+    /* - li links are not clicking, came back to old style;
+    
+   /* width: 40px;
+    height: 40px;
+    background: url('scl-block.png'), no-repeat; 
+}
+
+.ln {
+    background-position: 0 -70px;
+}
+
+.git {
+    background-position: 0 80px;
+}
+*/
 
 .contact-form {
     display: inline-block;
-    margin-left: 50px;
+  
 }
 
 #send-btn {
@@ -305,6 +334,7 @@ input[type="text"] {
     color: #205CCE;
     font-size: 16pt;
 }
+
 
 .page-footer {
     height: 100px;
@@ -345,13 +375,24 @@ input[type="text"] {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 770px) {
     body {
         font-size: 8pt;
         margin: 0 auto;
     }
     .page-header {
         height: auto;
+        animation-name: karusel;
+        animation-duration: 15s;
+    }
+
+    .page-header h1 {
+       float: left;
+       margin: 15px;
+       
+       top: 0%;
+       left: 0%;
+       width: 70%;
     }
     .flip-box{
         margin: 10px auto;

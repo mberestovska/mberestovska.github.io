@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,10 +51,12 @@
                     <p>I'm fast learning, self-driven and hard-working person, eager to be a part of a team. </p>
                     <p>My current technical skills are</p>
                     <div>
+                      
                         <img src="html.png" title="HTML" class="skill-icon">
                         <img src="css.png" title="CSS" class="skill-icon">
                         <img src="js.png" title="JavaScript - basic level" class="skill-icon">
                         <img src="wordpress.png" title="Wordpress" class="skill-icon">
+                     
                     </div>
                     <h3>Courses</h3>
                     <ul>
@@ -67,17 +69,19 @@
                 <article>
                     <h2 id="portfolio">Portfolio</h2>
                     <ul class="site-list">
-                        <li><a href=" https://mberestovska.github.io/site-1.mberestovska.github.io/" target="_blanck"><img src="site-1.png" alt="Print screen of web page"></a></li>
-                        <li><a href="https://mberestovska.github.io/Cake-site/" target="_blanck"><img src="site 2.png" alt="Print screen of web page"></a></li>
-                        <li><a href="http://travelbus.te.ua/" target="_blanck"><img src="site 3.png" alt="Print screen of web page"></a></li>
+                        <li><a href=" https://mberestovska.github.io/site-1.mberestovska.github.io/" target="blanck"><img src="site-1.png" alt="Print screen of web page"></a></li>
+                        <li><a href="https://mberestovska.github.io/Cake-site/" target="blanck"><img src="site 2.png" alt="Print screen of web page"></a></li>
+                        <li><a href="http://travelbus.te.ua/" target="blanck"><img src="site 3.png" alt="Print screen of web page"></a></li>
+                        <li><a href="https://mberestovska.github.io/Pilates/" target="blanck"><img src="site4.png" alt="Print screen of web page"></a></li>
                     </ul>
                 </article>
                 
                 <article class="clearfix">
                     <h2>Small presentations of JavaScript</h2>
                     <ul>
-                        <li><a href="https://mberestovska.github.io/Square-equation-solver/" target="_blanck">Solve a square equation</a></li>
-                        <li><a href="https://mberestovska.github.io/Game-Guess-a-number/" target="_blanck">Guess a number</a></li>
+                        <li><a href="https://mberestovska.github.io/Square-equation-solver/" target="blanck">Solve a square equation</a></li>
+                        <li><a href="https://mberestovska.github.io/Game-Guess-a-number/" target="blanck">Guess a number</a></li>
+                        <li><a href="https://mberestovska.github.io/game-cat-machine/" target="blanck">"Fruit Machine" but with cats</a></li>
                     </ul>
                 </article>
                 <article class="clearfix contact-part">
@@ -88,12 +92,12 @@
                             <li class="contact-item mail"><a href="mailto:berestovska.mariia@gmail.com">berestovska.mariia@gmail.com</a></li>
                         </ul>
                         <ul class="social">
-                            <li class="social-item fb"><a href="https://www.facebook.com/profile.php?id=100001558255625" target="_blank"><img src="facebook.png"></a></li>
-                            <li class="social-item ln"><a href="https://www.linkedin.com/in/mariia-berestovska-960a6b97/" target="_blank"><img src="linkedin.png"></a></li>
-                            <li class="social-item git"><a href="https://github.com/mberestovska" target="_blank"><img src="git.png"></a></li>
+                            <li class="social-item fb"><a href="https://www.facebook.com/profile.php?id=100001558255625" target="_blank"> <img src="facebook.png" alt="Facebook logo"></a></li>
+                            <li class="social-item ln"><a href="https://www.linkedin.com/in/mariia-berestovska-960a6b97/" target="_blank"> <img src="linkedin.png" alt="Linkedin logo"></a></li>
+                            <li class="social-item git"><a href="https://github.com/mberestovska" target="_blank"><img src="git.png" alt="Git logo"></a></li>
                         </ul>
                     </div>
-<!--
+
                     <div class="clearfix contact-form">
                         <p>Or you can just text me</p>
                         <form action="./mail.php" method="post">
@@ -102,20 +106,25 @@
                             <label for="email"> Email:</label>
                             <input type="text" id="email" placeholder="sofia@example.com" name="email"><br>
                             <label for="message">Your message:</label> <br>
-                            <textarea rows="5" cols="40" placeholder="Your message" name="message"></textarea><br>
+                            <textarea rows="5" cols="40" placeholder="Your message" name="message" id="message"></textarea><br>
                             <button type="submit" id="send-btn" value="Send">Send</button>
                         </form>
                         <?php include 'mail.php';?>
                     </div>
--->
+
                 </article>
             </div>
     </div>
     <div class="page-footer">
             <div class="container">
-                <p> &#169 by Maria Berestovska 2018</p>
+                <p> &#169; by Maria Berestovska 2018</p>
             </div>
     </div>
+    <script
+        src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+        crossorigin="anonymous">
+    </script>
     <script>
         // for menu icon 
         function myFunction(x) {
@@ -138,7 +147,21 @@
             var menuIcon = document.querySelector('.menu');
             menuIcon.classList.remove('change');
         } 
+
+        // for PARALLAX effect
+        if ($(window).width() > 770) {
+           // alert('More than 770');
+            $(window).scroll(function() {
+            var st = $(this).scrollTop();
+
+            $("h1").css({
+                "transform" : "translate(0%, " + st + "%"
+            })
+        });
+        }
+        
     </script>
+    
 
 </body>
 </html>
