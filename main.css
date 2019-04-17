@@ -261,7 +261,8 @@ h2 {
 .contact-part {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    /* this is needed only if there a mailing form added
+    justify-content: space-evenly;*/
 }
 
 .contact-list, .social {
